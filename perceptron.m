@@ -27,11 +27,11 @@ end
 %=====================================
 % run pereptron
 %=====================================
-[w,b,iterations,Error] = perceptrontrain(x(1:190,:),z(1:190,:));
-e=test(x(191:205,:),z(191:205,:),w,b);
-disp(['Test_Errors=' num2str(e) '     Test Data Size= ' num2str(15)])
+%[w,b,iterations,Error] = perceptrontrain(x(1:190,:),z(1:190,:));
+%e=test(x(191:205,:),z(191:205,:),w,b);
+%disp(['Test_Errors=' num2str(e) '     Test Data Size= ' num2str(15)])
 
-%[w,b,iterations,Error] = perceptrontrainbfgs(x,z);
+[w,b,iterations,Error] = perceptrontrainbfgs(x,z);
 %disp(w(1:60,1));
 %disp(b);
 disp(iterations);

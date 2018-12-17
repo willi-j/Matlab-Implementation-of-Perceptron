@@ -49,6 +49,7 @@ while (norm1>ftol) %repeat until no error
               %disp(size(grad));
               %disp(size(w));
               bigg = bigg +grad';
+             % disp(bigg);
               %disp(err);
               err=err +abs(diff);
              
@@ -69,7 +70,7 @@ while (norm1>ftol) %repeat until no error
           break;
        end
        if(iterations>1 && abs(err/Error(iterations-1))>1-ftol&&abs(err/Error(iterations-1))<1+ftol)
-           disp( err/Error(iterations-1));
+           %disp( err/Error(iterations-1));
            fprintf("error function does not decrease enough to justify keeping on");
            break;
        end
